@@ -228,9 +228,6 @@ function displayCurrentWeather(data) {
                 <div class="detail-value">
                     ${(data.visibility / 1000).toFixed(1)}<span class="detail-unit">km</span>
                 </div>
-                                <div class="detail-value">
-                    ${(data.visibility / 1000).toFixed(1)}<span class="detail-unit">km</span>
-                </div>
             </div>
         </div>
     `;
