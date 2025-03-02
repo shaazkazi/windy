@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- App Header -->
+        <div class="app-header">
+            <h1 class="app-title">Ambient Weather</h1>
+            <div class="app-controls">
+                <button id="location-btn" class="control-btn" title="Use your location">
+                    <i class="fas fa-location-arrow"></i>
+                </button>
+                <button id="theme-toggle" class="control-btn" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Card -->
+        <div class="search-card">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="city-input" class="search-input" placeholder="Search city...">
+                <button id="search-btn" class="search-btn">Search</button>
+            </div>
+            <div id="recent-searches" class="recent-searches">
+                <!-- Recent searches will be populated here -->
+            </div>
+        </div>
+
+        <!-- Weather Content -->
+        <div id="weather-info" class="weather-card">
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="empty-state" id="empty-state">
+                <i class="fas fa-cloud-sun"></i>
+                <p>Search for a city or use your current location to see weather information</p>
+            </div>
+            <!-- Weather content will be displayed here -->
+        </div>
+
+        <!-- Forecast Section (hidden initially) -->
+        <div id="forecast-section" class="forecast-section" style="display: none;">
+            <div class="section-header">
+                <h3 class="section-title">5-Day Forecast</h3>
+                <span class="section-action" id="toggle-forecast">View all</span>
+            </div>
+            <div id="forecast-list" class="forecast-list">
+                <!-- Forecast items will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-info-circle"></i>
+        <span id="toast-message" class="toast-message"></span>
+        <button id="toast-close" class="toast-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
