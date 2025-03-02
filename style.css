@@ -629,4 +629,102 @@ body::before {
         font-size: 20px;
     }
 }
+/* Update the media query section for better mobile responsiveness */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 12px;
+        max-width: 98%; /* Make container wider on mobile */
+        width: 98%;
+    }
 
+    /* Reduce padding on cards for mobile */
+    .search-card, .weather-card, .forecast-section {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .app-title {
+        font-size: 22px;
+    }
+
+    .current-temp {
+        font-size: 52px;
+    }
+
+    /* Fix search box layout */
+    .search-box {
+        flex-wrap: wrap; /* Allow wrapping on very small screens */
+        gap: 10px;
+    }
+    
+    .search-input {
+        padding: 12px 16px;
+        padding-left: 36px;
+        font-size: 14px;
+        flex: 1 1 auto;
+        min-width: 0; /* Allow input to shrink */
+    }
+    
+    .search-icon {
+        left: 12px;
+    }
+    
+    .search-btn {
+        padding: 0 14px;
+        font-size: 14px;
+        flex: 0 0 auto; /* Don't allow button to grow/shrink */
+        white-space: nowrap;
+    }
+    
+    .current-weather-card {
+        flex-direction: column;
+        padding: 16px;
+    }
+    
+    .weather-icon-large {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .detail-item {
+        padding: 14px;
+    }
+    
+    .detail-value {
+        font-size: 20px;
+    }
+
+    /* Ensure forecast items are properly sized */
+    .forecast-item {
+        min-width: 80px;
+        padding: 12px;
+    }
+}
+
+/* Add styles for very small screens */
+@media (max-width: 360px) {
+    .app-container {
+        padding: 8px;
+    }
+    
+    .search-box {
+        gap: 8px;
+    }
+    
+    .search-btn {
+        width: 100%; /* Full width button on very small screens */
+        margin-top: 8px;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .control-btn {
+        width: 38px;
+        height: 38px;
+    }
+}
+body {
+    padding: 2px;
+}
